@@ -95,37 +95,13 @@
             width: 650px; 
             border: solid 2px #152b53; 
             border-radius: 3px;
-            margin-bottom: 50px;
+            margin-bottom: 25px;
         }
 
         .questions-flexbox{
             display: flex; 
             flex-direction: row; 
             justify-content: space-between;
-        }
-
-        .choices-drop-bttn{
-            background-color: #152b53;
-            color: white;
-            border-radius: 5px;
-            border: none;
-            padding: 7px 20px;
-            margin-top: 10px;
-            box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.8s;
-        }
-
-        .choices-drop-bttn:hover{
-            background-color: #152b53e4;
-        }
-
-        .dropdown-menu{
-            border-color: #152b53;
-        }
-
-        .dropdown-item:hover{
-            background-color: #152b53;
-            color: white;
         }
 
         .slider {
@@ -164,11 +140,43 @@
 
         .suggestions-text-area{
             width: 500px; 
-            height: 50px; 
+            height: 30px; 
             border-radius: 5px; 
             border: solid 1px #152b53;
         }
 
+        .submit-container{
+            width: 650px; 
+            display: flex; 
+            justify-content: flex-end;
+        }
+
+        .bttn-submit{
+            padding: 7px 25px;
+            color: white;
+            background-color: #152b53;
+            font-family: 'Poppins';
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            transition: opacity 0.3s;
+        }
+
+        .bttn-submit:hover{
+            opacity: 0.9;
+        }
+
+        .select-bttn{
+            border: solid 1px #152b53;
+            color: #152b53;
+            border-radius: 4px;
+        }
+
+        .options{
+            color: #152b53;
+            font-family: 'Poppins';
+        }
+        
         @media (max-width: 767px) {
             .header-container {
                 flex-direction: column-reverse;
@@ -213,6 +221,12 @@
             }
         }
 
+        @media (max-width: 767px){
+            .submit-container {
+                width: 300px;
+            }
+        }
+
     </style>
   </head>
   <body>
@@ -241,7 +255,7 @@
                                                 2020-0001
                                             </div>
                                         </div>
-
+                                        <hr style="border: solid 1px; margin-left: 20px; margin-right: 20px;">
                                         <div class="Question1" style="margin-bottom: 30px;">
                                             <div class="questions-flexbox" style="justify-content: flex-start;">
                                                 <div style="width: 40px;"></div>
@@ -443,20 +457,17 @@
                                                 </div>
                                             </div>
                                             <div class="flexbox">
-                                                <div class="choices-Q7" style="margin-bottom: 20px;">
-                                                    <div class="dropdown">
-                                                        <button class="choices-drop-bttn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                          Select here
-                                                        </button>
-                                                        <ul class="dropdown-menu">
-                                                          <li><button class="dropdown-item" type="button" id="Innovation-choice">Innovation Districts</button></li>
-                                                          <li><button class="dropdown-item" type="button" id="youthnetwork-choice">Smart Cities Youth Network</button></li>
-                                                          <li><button class="dropdown-item" type="button" id="healthcare-choice">Smart Healthcare in the Philippines</button></li>
-                                                          <li><button class="dropdown-item" type="button" id="UNSDG-choice">UN SDG Sessions</button></li>
-                                                          <li><button class="dropdown-item" type="button" id="bankable-choice">Bankable Projects</button></li>
-                                                          <li><button class="dropdown-item" type="button" id="design-thinking-choice">Design Thinking for Iligan City Smart Apps</button></li>
-                                                        </ul>
-                                                      </div>
+                                                <div class="choices-Q7" style="margin-top: 20px;">
+                                                    <select class="select-bttn form-select-sm ;" aria-label=".form-select-sm example">
+                                                        <option class="options" selected>Open this select menu</option>
+                                                        <option class="options" value="1" id="Innovation-choice">Innovation Districts</option>
+                                                        <option class="options" value="2" id="youthnetwork-choice">Smart Cities Youth Network</option>
+                                                        <option class="options" value="3" id="healthcare-choice">Smart Healthcare in the Philippines</option>
+                                                        <option class="options" value="4" id="UNSDG-choice">UN SDG Sessions</option>
+                                                        <option class="options" value="5" id="bankable-choice">Bankable Projects</option>
+                                                        <option class="options" value="6" id="design-thinking-choice">Design Thinking for Iligan City Smart Apps</option>
+                                                    </select>
+                
                                                 </div>
                                             </div>
                                         </div>
@@ -470,18 +481,14 @@
                                                 </div>
                                             </div>
                                             <div class="flexbox">
-                                                <div class="choices-Q8" style="margin-bottom: 20px;">
-                                                    <div class="dropdown">
-                                                        <button class="choices-drop-bttn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                          Select here
-                                                        </button>
-                                                        <ul class="dropdown-menu">
-                                                          <li><button class="dropdown-item" type="button" id="healthcare-choice">Smart Healthcare in the Philippines</button></li>
-                                                          <li><button class="dropdown-item" type="button" id="UNSDG-choice">UN SDG Sessions</button></li>
-                                                          <li><button class="dropdown-item" type="button" id="bankable-choice">Bankable Projects</button></li>
-                                                          <li><button class="dropdown-item" type="button" id="design-thinking-choice">Design Thinking for Iligan City Smart Apps</button></li>
-                                                        </ul>
-                                                      </div>
+                                                <div class="choices-Q8" style="margin-top: 20px;">
+                                                    <select class="select-bttn form-select-sm ;" aria-label=".form-select-sm example">
+                                                        <option class="options" selected>Open this select menu</option>
+                                                        <option class="options" value="1">Smart Healthcare in the Philippines</option>
+                                                        <option class="options" value="2">UN SDG Sessions</option>
+                                                        <option class="options" value="3">Bankable Projects</option>
+                                                        <option class="options" value="3">Design Thinking for Iligan City Smart Apps</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -583,7 +590,7 @@
                                         </div>
 
                                         <div class="Suggestions" style="margin-bottom: 30px;">
-                                            <div class="sugg-flexbox" style="justify-content: flex-start;">
+                                            <div class="flexbox" style="justify-content: flex-start;">
                                                 <div style="width: 40px;"></div>
                                                 <div> 
                                                     <p style="padding-left: 20px; color: #152b53; font-weight: bold;">
@@ -591,14 +598,19 @@
                                                 </div>
                                             </div>
                                             <div class="flexbox">
-                                                <div class="choices-Q11" style="margin-bottom: 20px;">
+                                                <div class="choices-Q12" style="margin-top: 10px;">
                                                     <input class="suggestions-text-area" type="text" placeholder="Your Answer" id="suggestions-input">
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div style="width: 1fr;"></div>
+                                </div>
+                                <div class="flexbox">
+                                    <div class="submit-container">
+                                        <button class="bttn-submit"> Submit</button>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

@@ -97,6 +97,64 @@
             justify-content: space-between;
         }
 
+        .choices-drop-bttn{
+            background-color: #152b53;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            padding: 7px 20px;
+            margin-top: 10px;
+            box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.8s;
+        }
+
+        .choices-drop-bttn:hover{
+            background-color: #152b53e4;
+        }
+
+        .dropdown-menu{
+            border-color: #152b53;
+        }
+
+        .dropdown-item:hover{
+            background-color: #152b53;
+            color: white;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 300px;
+            height: 5px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #152b53;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #152b53;
+            cursor: pointer;
+        }
+
         @media (max-width: 767px) {
             .header-container {
                 flex-direction: column-reverse;
@@ -160,9 +218,26 @@
                                                         Q1: The summit / workshop was timely and significant.</p>
                                                 </div>
                                             </div>
-                                            <div class="flexbox">
+                                            <div class="flexbox" style="flex-direction: column; align-items: center;">
+                                                <div class="flexbox" style="column-gap: 32px; margin-top: 10px;">
+                                                    <div style="opacity: 0.4;" class="choices-emoji">
+                                                        <img src="/smartcities-images/strongly-agree-icon.svg" alt="Strongly Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji">
+                                                        <img src="/smartcities-images/agree-icon.svg" alt="Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji">
+                                                        <img src="/smartcities-images/neutral-icon.svg" alt="Neutral">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji">
+                                                        <img src="/smartcities-images/disagree-icon.svg" alt="Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji">
+                                                        <img src="/smartcities-images/strongly-disagree-icon.svg" alt="Strongly Disagree">
+                                                    </div>
+                                                </div>
                                                 <div class="choices-Q1" style="margin-bottom: 20px;">
-                                                    Put choices here
+                                                    <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
                                                 </div>
                                             </div>
                                         </div>
@@ -238,6 +313,119 @@
                                             <div class="flexbox">
                                                 <div class="choices-Q6" style="margin-bottom: 20px;">
                                                     Put choices here
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question7">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p style="padding-left: 20px;">
+                                                        Q7: Sessions joined / participated on Day One (August 14, 2023). </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="choices-Q7" style="margin-bottom: 20px;">
+                                                    <div class="dropdown">
+                                                        <button class="choices-drop-bttn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                          Select here
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                          <li><button class="dropdown-item" type="button">Innovation Districts</button></li>
+                                                          <li><button class="dropdown-item" type="button">Smart Cities Youth Network</button></li>
+                                                          <li><button class="dropdown-item" type="button">Smart Healthcare in the Philippines</button></li>
+                                                          <li><button class="dropdown-item" type="button">UN SDG Sessions</button></li>
+                                                          <li><button class="dropdown-item" type="button">Bankable Projects</button></li>
+                                                          <li><button class="dropdown-item" type="button">Design Thinking for Iligan City Smart Apps</button></li>
+                                                        </ul>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question8">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p style="padding-left: 20px;">
+                                                        Q8: Sessions joined / participated on Day Two (August 15, 2023) </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="choices-Q8" style="margin-bottom: 20px;">
+                                                    <div class="dropdown">
+                                                        <button class="choices-drop-bttn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                          Select here
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                          <li><button class="dropdown-item" type="button">Smart Healthcare in the Philippines</button></li>
+                                                          <li><button class="dropdown-item" type="button">UN SDG Sessions</button></li>
+                                                          <li><button class="dropdown-item" type="button">Bankable Projects</button></li>
+                                                          <li><button class="dropdown-item" type="button">Design Thinking for Iligan City Smart Apps</button></li>
+                                                        </ul>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question9">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p style="padding-left: 20px;">
+                                                        Q9: The venue and its facilities are good enough to meet my needs. </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="choices-Q9" style="margin-bottom: 20px;">
+                                                    Put choices here
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question10">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p style="padding-left: 20px;">
+                                                        Q10: The food (meals and snacks) served were nourishing. </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="choices-Q10" style="margin-bottom: 20px;">
+                                                    Put choices here
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question11">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p style="padding-left: 20px;">
+                                                        Q11:The accommodation I stayed at met all my needs.</p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="choices-Q11" style="margin-bottom: 20px;">
+                                                    Put choices here
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Suggestions">
+                                            <div class="sugg-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p style="padding-left: 20px; color: #152b53; font-weight: bold;">
+                                                        Please share your suggestions for improvement.</p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="choices-Q11" style="margin-bottom: 20px;">
+                                                    <input class="suggestions-text-area" type="text" placeholder="Your Answer" 
+                                                    style="width: 500px; height: 50px; border-radius: 5px; border: solid 1px #152b53;">
                                                 </div>
                                             </div>
                                         </div>

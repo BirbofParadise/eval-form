@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+    <title>Philippine Smart City Innovation Workshop | Evaluation and Feedback Form </title>
+    <style>
+        h1{
+            font-family: 'Poppins';
+        }
+
+        p{
+            color: #1E1E1E;
+            font-family: Poppins;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        .div-fp {
+            border-radius: 12px;
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header-container{
+            display: flex; 
+            flex-direction: row;
+            justify-content: center;
+            align-items:flex-end;
+            column-gap: 200px;
+            margin-bottom: 30px;
+        }
+
+        .eval-header{
+            font-family: 'Poppins';
+            font-weight: bold;
+            font-size: 40px;
+            padding-left: 30px;
+            padding-top: 40px;
+            
+        }
+
+        .eval-logo-header{
+            width: 120px;
+            object-fit: cover;
+            padding-top: 40px;
+            padding-right: 30px;
+            padding-bottom: 16px;
+        }
+
+        .flexbox{
+            display: flex; 
+            justify-content: center;
+        }
+
+        .flexbox-username, .flexbox-user-id{
+            display: flex; 
+            justify-content: center;
+            font-family: 'Poppins';
+            font-weight: bold;
+        }
+
+        .flexbox-for-icons{
+            display: flex; 
+            justify-content: center;
+            column-gap: 32px; 
+            margin-top: 10px;
+        }
+
+        .user-icon-img{
+            margin-top: 20px;
+        }
+
+        .user-id{
+            font-weight: 400;
+            background-color: #152b53;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            padding: 4px 30px;
+            margin-bottom: 20px;
+        }
+
+        .questions{
+            width: 650px; 
+            border: solid 2px #152b53; 
+            border-radius: 3px;
+            margin-bottom: 25px;
+        }
+
+        .questions-flexbox{
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-between;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 300px;
+            height: 5px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #152b53;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #152b53;
+            cursor: pointer;
+        }
+
+        .suggestions-text-area{
+            width: 500px; 
+            height: 30px; 
+            border-radius: 5px; 
+            border: solid 1px #152b53;
+        }
+
+        .submit-container{
+            width: 650px; 
+            display: flex; 
+            justify-content: flex-end;
+        }
+
+        .bttn-submit{
+            padding: 7px 25px;
+            color: white;
+            background-color: #152b53;
+            font-family: 'Poppins';
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            transition: opacity 0.3s;
+        }
+
+        .bttn-submit:hover{
+            opacity: 0.9;
+        }
+
+        .select-bttn{
+            border: solid 1px #152b53;
+            color: #152b53;
+            border-radius: 4px;
+        }
+
+        .options{
+            color: #152b53;
+            font-family: 'Poppins';
+        }
+        
+        @media (max-width: 767px) {
+            .header-container {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .eval-header {
+                font-size: 20px; 
+                padding: 10px 0;
+            }
+
+            .eval-logo-header {
+                max-width: 80px; 
+                object-fit: cover;
+                padding: 10px 0;
+            }
+        }
+
+        @media (max-width: 767px){
+            .questions {
+                width: 300px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .flexbox-for-icons{
+                column-gap: 5px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .slider{
+                width: 200px;
+            }
+        }
+        
+        @media (max-width: 767px){
+            .suggestions-text-area {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 767px){
+            .submit-container {
+                width: 300px;
+            }
+        }
+
+    </style>
+  </head>
+  <body>
+        <section> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="div-fp">
+                            <div class="header-container">
+                                <div class="eval-header">Forum Evaluation</div>
+                                <img class="eval-logo-header" src="smartcities-images/logo4eval.svg">
+                            </div>
+
+                            <div class="questions-container">
+                                <div class="questions-flexbox" style="display: flex; flex-direction: row; justify-content: space-between;">
+                                    <div style="width: 1fr;"></div>
+                                    <div class="questions">
+                                        <div class="flexbox">
+                                            <img class="user-icon-img" src="smartcities-images/user-profile-logo.svg">
+                                        </div>
+                                        <div class="flexbox-username" id="user-name">
+                                            Juan Karlos Labajo
+                                        </div>
+                                        <div class="flexbox-user-id">
+                                            <div class="user-id" id="id-user">
+                                                2020-0001
+                                            </div>
+                                        </div>
+                                        <hr style="border: solid 1px; margin-left: 20px; margin-right: 20px;">
+                                        <div class="Question1" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p id="Q1" style="padding-left: 20px; padding-right: 10px;">
+                                                        Q1: The summit / workshop was timely and significant.</p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox" style="flex-direction: column; align-items: center;">
+                                                <div class="flexbox-for-icons">
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-disagree-choice">
+                                                        <img src="/smartcities-images/strongly-disagree-icon.svg" alt="Strongly Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="disagree-choice">
+                                                        <img src="/smartcities-images/disagree-icon.svg" alt="Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="neutral-choice">
+                                                        <img src="/smartcities-images/neutral-icon.svg" alt="Neutral">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="Agree-choice">
+                                                        <img src="/smartcities-images/agree-icon.svg" alt="Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-agree-choice">
+                                                        <img src="/smartcities-images/strongly-agree-icon.svg" alt="Strongly Agree">
+                                                    </div>
+                                                </div>
+                                                <div class="choices-Q1" style="margin-bottom: 10px;">
+                                                    <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question2" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p id="Q2" style="padding-left: 20px; padding-right: 10px">
+                                                        Q2:The speakers were competent and able to give clear explanations. </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox" style="flex-direction: column; align-items: center;">
+                                                <div class="flexbox-for-icons">
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-disagree-choice">
+                                                        <img src="/smartcities-images/strongly-disagree-icon.svg" alt="Strongly Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="disagree-choice">
+                                                        <img src="/smartcities-images/disagree-icon.svg" alt="Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="neutral-choice">
+                                                        <img src="/smartcities-images/neutral-icon.svg" alt="Neutral">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="Agree-choice">
+                                                        <img src="/smartcities-images/agree-icon.svg" alt="Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-agree-choice">
+                                                        <img src="/smartcities-images/strongly-agree-icon.svg" alt="Strongly Agree">
+                                                    </div>
+                                                </div>
+                                                <div class="choices-Q1" style="margin-bottom: 10px;">
+                                                    <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question3" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p id="Q3" style="padding-left: 20px; padding-right: 10px">
+                                                        Q3: The facilitators were helpful and able to guide the discussions. </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox" style="flex-direction: column; align-items: center;">
+                                                <div class="flexbox-for-icons">
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-disagree-choice">
+                                                        <img src="/smartcities-images/strongly-disagree-icon.svg" alt="Strongly Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="disagree-choice">
+                                                        <img src="/smartcities-images/disagree-icon.svg" alt="Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="neutral-choice">
+                                                        <img src="/smartcities-images/neutral-icon.svg" alt="Neutral">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="Agree-choice">
+                                                        <img src="/smartcities-images/agree-icon.svg" alt="Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-agree-choice">
+                                                        <img src="/smartcities-images/strongly-agree-icon.svg" alt="Strongly Agree">
+                                                    </div>
+                                                </div>
+                                                <div class="choices-Q1" style="margin-bottom: 10px;">
+                                                    <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question4" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p id="Q4" style="padding-left: 20px; padding-right: 10px">
+                                                        Q4: There was enough time allotted for the parallel and workshop sessions.</p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox" style="flex-direction: column; align-items: center;">
+                                                <div class="flexbox-for-icons">
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-disagree-choice">
+                                                        <img src="/smartcities-images/strongly-disagree-icon.svg" alt="Strongly Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="disagree-choice">
+                                                        <img src="/smartcities-images/disagree-icon.svg" alt="Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="neutral-choice">
+                                                        <img src="/smartcities-images/neutral-icon.svg" alt="Neutral">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="Agree-choice">
+                                                        <img src="/smartcities-images/agree-icon.svg" alt="Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-agree-choice">
+                                                        <img src="/smartcities-images/strongly-agree-icon.svg" alt="Strongly Agree">
+                                                    </div>
+                                                </div>
+                                                <div class="choices-Q1" style="margin-bottom: 10px;">
+                                                    <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question5" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p id="Q5" style="padding-left: 20px; padding-right: 10px">
+                                                        Q5: I am happy with the outcome of the  summit / workshop. </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox" style="flex-direction: column; align-items: center;">
+                                                <div class="flexbox-for-icons">
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-disagree-choice">
+                                                        <img src="/smartcities-images/strongly-disagree-icon.svg" alt="Strongly Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="disagree-choice">
+                                                        <img src="/smartcities-images/disagree-icon.svg" alt="Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="neutral-choice">
+                                                        <img src="/smartcities-images/neutral-icon.svg" alt="Neutral">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="Agree-choice">
+                                                        <img src="/smartcities-images/agree-icon.svg" alt="Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-agree-choice">
+                                                        <img src="/smartcities-images/strongly-agree-icon.svg" alt="Strongly Agree">
+                                                    </div>
+                                                </div>
+                                                <div class="choices-Q1" style="margin-bottom: 10px;">
+                                                    <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="Question6" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div>  
+                                                    <p id="Q6" style="padding-left: 20px; padding-right: 10px">
+                                                        Q6: I learned new information from the  summit / workshop. </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox" style="flex-direction: column; align-items: center;">
+                                                <div class="flexbox-for-icons">
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-disagree-choice">
+                                                        <img src="/smartcities-images/strongly-disagree-icon.svg" alt="Strongly Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="disagree-choice">
+                                                        <img src="/smartcities-images/disagree-icon.svg" alt="Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="neutral-choice">
+                                                        <img src="/smartcities-images/neutral-icon.svg" alt="Neutral">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="Agree-choice">
+                                                        <img src="/smartcities-images/agree-icon.svg" alt="Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-agree-choice">
+                                                        <img src="/smartcities-images/strongly-agree-icon.svg" alt="Strongly Agree">
+                                                    </div>
+                                                </div>
+                                                <div class="choices-Q1" style="margin-bottom: 10px;">
+                                                    <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question7" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p id="Q7" style="padding-left: 20px; padding-right: 10px">
+                                                        Q7: Sessions joined / participated on Day One (August 14, 2023). </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="choices-Q7" style="margin-top: 20px;">
+                                                    <select class="select-bttn form-select-sm ;" aria-label=".form-select-sm example">
+                                                        <option class="options" selected>Open this select menu</option>
+                                                        <option class="options" value="1" id="Innovation-choice">Innovation Districts</option>
+                                                        <option class="options" value="2" id="youthnetwork-choice">Smart Cities Youth Network</option>
+                                                        <option class="options" value="3" id="healthcare-choice">Smart Healthcare in the Philippines</option>
+                                                        <option class="options" value="4" id="UNSDG-choice">UN SDG Sessions</option>
+                                                        <option class="options" value="5" id="bankable-choice">Bankable Projects</option>
+                                                        <option class="options" value="6" id="design-thinking-choice">Design Thinking for Iligan City Smart Apps</option>
+                                                    </select>
+                
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question8" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p id="Q8" style="padding-left: 20px; padding-right: 10px">
+                                                        Q8: Sessions joined / participated on Day Two (August 15, 2023) </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="choices-Q8" style="margin-top: 20px;">
+                                                    <select class="select-bttn form-select-sm ;" aria-label=".form-select-sm example">
+                                                        <option class="options" selected>Open this select menu</option>
+                                                        <option class="options" value="1">Smart Healthcare in the Philippines</option>
+                                                        <option class="options" value="2">UN SDG Sessions</option>
+                                                        <option class="options" value="3">Bankable Projects</option>
+                                                        <option class="options" value="3">Design Thinking for Iligan City Smart Apps</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question9" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p id="Q9" style="padding-left: 20px; padding-right: 10px">
+                                                        Q9: The venue and its facilities are good enough to meet my needs. </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox" style="flex-direction: column; align-items: center;">
+                                                <div class="flexbox-for-icons">
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-disagree-choice">
+                                                        <img src="/smartcities-images/strongly-disagree-icon.svg" alt="Strongly Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="disagree-choice">
+                                                        <img src="/smartcities-images/disagree-icon.svg" alt="Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="neutral-choice">
+                                                        <img src="/smartcities-images/neutral-icon.svg" alt="Neutral">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="Agree-choice">
+                                                        <img src="/smartcities-images/agree-icon.svg" alt="Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-agree-choice">
+                                                        <img src="/smartcities-images/strongly-agree-icon.svg" alt="Strongly Agree">
+                                                    </div>
+                                                </div>
+                                                <div class="choices-Q1" style="margin-bottom: 10px;">
+                                                    <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question10" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p id="Q10" style="padding-left: 20px; padding-right: 10px">
+                                                        Q10: The food (meals and snacks) served were nourishing. </p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox" style="flex-direction: column; align-items: center;">
+                                                <div class="flexbox-for-icons">
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-disagree-choice">
+                                                        <img src="/smartcities-images/strongly-disagree-icon.svg" alt="Strongly Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="disagree-choice">
+                                                        <img src="/smartcities-images/disagree-icon.svg" alt="Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="neutral-choice">
+                                                        <img src="/smartcities-images/neutral-icon.svg" alt="Neutral">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="Agree-choice">
+                                                        <img src="/smartcities-images/agree-icon.svg" alt="Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-agree-choice">
+                                                        <img src="/smartcities-images/strongly-agree-icon.svg" alt="Strongly Agree">
+                                                    </div>
+                                                </div>
+                                                <div class="choices-Q1" style="margin-bottom: 10px;">
+                                                    <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Question11" style="margin-bottom: 30px;">
+                                            <div class="questions-flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p id="Q11" style="padding-left: 20px; padding-right: 10px">
+                                                        Q11:The accommodation I stayed at met all my needs.</p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox" style="flex-direction: column; align-items: center;">
+                                                <div class="flexbox-for-icons">
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-disagree-choice">
+                                                        <img src="/smartcities-images/strongly-disagree-icon.svg" alt="Strongly Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="disagree-choice">
+                                                        <img src="/smartcities-images/disagree-icon.svg" alt="Disagree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="neutral-choice">
+                                                        <img src="/smartcities-images/neutral-icon.svg" alt="Neutral">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="Agree-choice">
+                                                        <img src="/smartcities-images/agree-icon.svg" alt="Agree">
+                                                    </div>
+                                                    <div style="opacity: 0.4;" class="choices-emoji" id="strong-agree-choice">
+                                                        <img src="/smartcities-images/strongly-agree-icon.svg" alt="Strongly Agree">
+                                                    </div>
+                                                </div>
+                                                <div class="choices-Q1" style="margin-bottom: 10px;">
+                                                    <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="Suggestions" style="margin-bottom: 30px;">
+                                            <div class="flexbox" style="justify-content: flex-start;">
+                                                <div style="width: 40px;"></div>
+                                                <div> 
+                                                    <p style="padding-left: 20px; color: #152b53; font-weight: bold;">
+                                                        Please share your suggestions for improvement.</p>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="choices-Q12" style="margin-top: 10px;">
+                                                    <input class="suggestions-text-area" type="text" placeholder="Your Answer" id="suggestions-input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 1fr;"></div>
+                                </div>
+                                <div class="flexbox">
+                                    <div class="submit-container">
+                                        <button class="bttn-submit"> Submit</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

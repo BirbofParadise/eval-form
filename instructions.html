@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media(max-width: 400px) {
+            .flexbox-container{
+                border: solid red;
+                display: flex;
+                justify-content: center;
+            }
+
+            .flexbox-row{
+                display: flex;
+                border: solid blue;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="instruction container">
+        <div> Instructions: </div>
+        <div>Thank you for joining the Smart Cities Innovation Workshop 2023. 
+            Please take a moment to provide your feedback using the options below:</div>
+    </div>
+    <div class="flexbox-container" style="border: solid red;">
+        <div style="border: solid green;">
+            <div class="flexbox-row" style="display: flex;border: solid blue;justify-content: space-between;"">
+                <div>
+                    <img src="smartcities-images/strongly-disagree-icon.svg" alt="">
+                </div>
+                <div>
+                    <img src="smartcities-images/disagree-icon.svg" alt="">
+                </div>
+                <div>
+                    <img src="smartcities-images/neutral-icon.svg" alt="">
+                </div>
+                <div>
+                    <img src="smartcities-images/disagree-icon.svg" alt="">
+                </div>
+                <div>
+                    <img src="smartcities-images/strongly-disagree-icon.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div style="border: solid green;">
+            <div class="flexbox-row" style="display: flex;border: solid blue;justify-content: space-between;"">
+                <div>Stronly Disagree</div>
+                <div>Disagree</div>
+                <div>Neutral</div>
+                <div>Agree</div>
+                <div>Strongly gree</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
